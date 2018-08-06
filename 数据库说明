@@ -1,0 +1,69 @@
+首先应该进行后端的数据库设计
+创建一个数据库resume
+应该有9个表
+第一个表是个人信息，
+姓名，头像地址，id
+性别，年龄，户籍，政治身份，电话，邮箱，求职意向。
+
+表名PersonInfo
+Name varchar(32)
+ImgAddr varchar(1024)
+Id int ,
+Sex varchar(10),
+Age int,
+CensusRegister varchar(200)
+PoliticalIdentity varchar(32)
+Phone varchar(100),
+Email varchar(100),
+Intention varchar(100)
+第二个表是个人介绍表SituationInfo
+Id， 介绍
+Id int,
+Introduce varchar(1024)
+
+第三个表是教育背景EducationInfo
+Id 开始时间 截至时间 毕业大学 专业 学历
+Id int,
+StartTime datetime ,
+EndTime datetime
+University varchar(100)
+Major varchar(100)
+Degree varchar(100)
+
+第4个表是学习期间的学习表现。StudyInfo
+Id 学习表现 编号
+Id int
+Performance varchar(1024)
+Number int AUTO_INCREMENT
+第5个表是工作经历表 ExperienceInfo
+Id 开始时间 截至时间 公司  职位  介绍
+
+Id int 
+StartTime datetime ,
+EndTime datetime
+Company varchar(100)
+Position varchar(100)
+Details varchar(1024)
+
+第6个表是技能特长表skillinfo
+Id 技能名称 分数
+Id int
+SkillName varchar(100)
+Score int
+第7个表是荣誉证书CertificateInfo
+Id 时间 名称
+Id int 
+Time datetime 
+Name varchar(100)
+第8个表自我评价evaluateInfo
+Id 编号 评价
+Id int
+Number int
+Evaluate varchar(1024)
+第9个表 是账户管理account
+用户名 密码 id
+Root 123456 1
+Username varchar(100),
+Password varchar(100)
+Id int NOT NULL AUTO_INCREMENT
+
